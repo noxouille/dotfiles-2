@@ -18,6 +18,7 @@ Steps:
 ---
 
 ### The script will:
+
 * install system stuff
 
 ```
