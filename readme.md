@@ -25,12 +25,6 @@ ranger htop curl scrot atool unzip python3-pip clang neovim
 mupdf mplayer qutebrowser
 ```
 
-* check repository files
-
-```
-dwm/ st/ dmenu/ .xinitrc .bashrc nvim/
-```
-
 * move everything to appropriate directory
 
 ```
