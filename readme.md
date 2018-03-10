@@ -1,5 +1,11 @@
 ## My arch setup
 
+TODO:
+
+* Configure qutebroser
+
+---
+
 Steps:
 
 1. Install git and clone repo
@@ -15,13 +21,14 @@ Steps:
 * install system stuff
 
 ```
-xorg libx11-dev libxft-dev libxinerama-dev ttf-ubuntu-font-family
+xorg-server xorg-xinit xorg-xsetroot bash-completion
+libx11 libxft libxinerama ttf-ubuntu-font-family
 ```
 
 * install apps
 
 ```
-ranger htop curl scrot atool unzip python3-pip clang neovim
+ranger htop scrot atool unzip python-pip clang neovim
 mupdf mplayer qutebrowser
 ```
 
@@ -38,7 +45,6 @@ nvim to ~/.config/
 ```
 ranger --copy-config=all
 make clean install for apps
-mkdir ~/.local/share/nvim/plugs
 run curl script to install vim-plug
 ```
 
