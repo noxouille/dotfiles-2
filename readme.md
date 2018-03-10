@@ -1,10 +1,4 @@
-## My arch setup
-
-TODO:
-
-* Configure qutebroser
-
----
+## NEED TO CREATE THE SCRIPT
 
 Steps:
 
@@ -38,7 +32,7 @@ mupdf mplayer qutebrowser
 ```
 dwm st dmenu to ~/apps
 bashrc xinitrc to ~/
-nvim to ~/.config/
+nvim qutebrowser to ~/.config/
 ```
 
 * execute commands
