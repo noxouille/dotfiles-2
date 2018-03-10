@@ -789,6 +789,7 @@ c.fonts.monospace = '"Ubuntu Mono", "DejaVu Sans Mono"'
 ## Font used for prompts.
 ## Type: Font
 # c.fonts.prompts = '10pt sans-serif'
+c.fonts.prompts = '10pt monospace'
 
 ## Font used in the statusbar.
 ## Type: Font
@@ -808,19 +809,19 @@ c.fonts.monospace = '"Ubuntu Mono", "DejaVu Sans Mono"'
 
 ## Font family for fixed fonts.
 ## Type: FontFamily
-# c.fonts.web.family.fixed = ''
+c.fonts.web.family.fixed = 'Ubuntu Mono'
 
 ## Font family for sans-serif fonts.
 ## Type: FontFamily
-# c.fonts.web.family.sans_serif = ''
+c.fonts.web.family.sans_serif = 'Ubuntu'
 
 ## Font family for serif fonts.
 ## Type: FontFamily
-# c.fonts.web.family.serif = ''
+c.fonts.web.family.serif = 'Ubuntu'
 
 ## Font family for standard fonts.
 ## Type: FontFamily
-# c.fonts.web.family.standard = ''
+c.fonts.web.family.standard = 'Ubuntu'
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
