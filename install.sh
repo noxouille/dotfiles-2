@@ -8,14 +8,16 @@ pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion libx1
 pip install --upgrade jedi neovim flake8
 # placing everything properly
 cp -R apps/ $hdir/apps
-cp -R config/qutebrowser $hdir/.config/qutebrowser
-cp -R config/ranger $hdir/.config/ranger
-cp -R config/nvim $hdir/.config/nvim
+cp -R config/qutebrowser $hdir/.config
+cp -R config/ranger $hdir/.config
+cp -R config/nvim $hdir/.config
 cp bashrc $hdir/.bashrc
 cp xinitrc $hdir/.xinitrc
 # installing suckless tools
 cd $hdir/apps/dwm-6.1/ && make clean install
 cd $hdir/apps/dmenu-4.7/ && make clean install
 cd $hdir/apps/st-0.7/ && make clean install
+chown -R $1 $hdir
 # everything is done
-echo "GREAT, ALL DONE. Now run the curl script and :PlugInstall"
+echo "GREAT, ALL DONE"
+echo "Now run the curl script and after that run in nvim :PlugInstall"
