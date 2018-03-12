@@ -33,5 +33,6 @@ jedi neovim flake8
 
 2. Run in nvim :PlugInstall
 3. Configure locales
-4. Configure hardware (touchpad, sound, wireless, etc)
-5. Configure dwm hotkeys (brightness, volume, scrot)
+4. Configure git not to ask pwd everytime
+5. Configure hardware (touchpad, sound, wireless, etc)
+6. Configure dwm hotkeys (brightness, volume, scrot)
