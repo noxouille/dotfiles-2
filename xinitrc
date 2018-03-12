@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export EDITOR=nvim
-xsetroot -solid \#003040
+xsetroot -solid \#004040
 
 # For BAT : $(cat /sys/class/power_supply/BAT0/capacity)
 while true;
