@@ -1,10 +1,19 @@
 ## My dotfiles and configs
 
-TODO: qb config
-
 Steps:
 
 1. Install git and clone repo
+1. Run the install.sh as root (sudo) and pass it your username
+1. Run the curl.sh (now you can startx)
+1. Run in nvim :PlugInstall
+1. Configure locales
+1. Configure git not to ask pwd everytime
+1. Configure hardware (touchpad, sound, wireless, etc)
+1. Configure dwm hotkeys (brightness, volume, scrot)
+
+---
+
+### What does the script
 
 * install system stuff
 ```
@@ -20,21 +29,13 @@ mupdf mplayer qutebrowser
 ```
 dwm st dmenu to ~/apps
 bashrc xinitrc to ~/
-nvim qutebrowser to ~/.config/
+nvim qutebrowser ranger to ~/.config/
 ```
 * execute commands
 ```
-ranger --copy-config=all
 make clean install for apps
-run curl script to install vim-plug
 ```
 * pip install
 ```
 jedi neovim flake8
 ```
-
-2. Run in nvim :PlugInstall
-3. Configure locales
-4. Configure git not to ask pwd everytime
-5. Configure hardware (touchpad, sound, wireless, etc)
-6. Configure dwm hotkeys (brightness, volume, scrot)
