@@ -4,8 +4,10 @@
 static const unsigned int gappx = 2;
 static const char *fonts[] = {
 	"Ubuntu Mono:size=11"
+	/* "Ubuntu Mono:size=10" */
 };
 static const char dmenufont[]       = "Ubuntu Mono:size=11";
+/* static const char dmenufont[]       = "DejaVu Sans Mono:size=10"; */
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
