@@ -8,8 +8,7 @@
 Steps (intended to use just after arch install):
 1. Install git and clone repo
 1. Run the install.sh as root (from dotfiles dir) and pass it your username
-1. Run the curl.sh (not as root) 
-1. Start X
+1. Start X (optional)
 1. Run in nvim :PlugInstall
 
 Next is optional (just for me) (saying like someone else uses this crap):
