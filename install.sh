@@ -3,7 +3,7 @@
 hdir=/home/$1
 # installing packages
 pacman -Syu --noconfirm
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot atool unzip python-pip clang neovim mupdf mplayer qutebrowser
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot atool unzip python-pip clang neovim mupdf mplayer qutebrowser
 # pip installing for nvim plugins
 pip install --upgrade jedi neovim flake8
 # placing everything properly
