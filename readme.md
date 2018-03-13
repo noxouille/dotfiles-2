@@ -1,6 +1,6 @@
 # My dotfiles and script to autoinstall comfy dwm environment
 
-###Todo
+### Todo
 * Neovim clipboard
 
 Steps:
@@ -9,6 +9,8 @@ Steps:
 1. Run the curl.sh (not as root) 
 1. Start X
 1. Run in nvim :PlugInstall
+
+Next is optional (just for me) (saying like someone else uses this crap):
 1. Configure locales
 1. Configure git not to ask pwd everytime
 1. Configure hardware (touchpad, sound, wireless, etc)
