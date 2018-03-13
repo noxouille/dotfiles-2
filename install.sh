@@ -19,13 +19,15 @@ cp -f xinitrc $hdir/.xinitrc
 echo "Placing configs for both root and user in a proper location"
 curl -fLo $hdir/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &> /dev/null
 mkdir -p $hdir/.config/{qutebrowser,ranger,nvim}
-mkdir -p /root/.config/{ranger,nvim}
 cp -Rf config/qutebrowser/* $hdir/.config/qutebrowser/
 cp -Rf config/ranger/*      $hdir/.config/ranger/
 cp -Rf config/nvim/*        $hdir/.config/nvim/
-cp -Rf config/ranger/*      /root/.config/ranger/
-cp -Rf config/rootnvim/*    /root/.config/nvim/
 mkdir $hdir/downloads
+echo "Doing similar for root"
+mkdir -p /root/.config/{ranger,nvim}
+cp -f rbashrc               /root/.bashrc
+cp -Rf config/ranger/*      /root/.config/ranger/
+cp -Rf config/rnvim/*       /root/.config/nvim/
 echo "Changing the owner (recursively) of the home directory"
 chown -R $1 $hdir
 echo "Everything is done, now run in nvim :PlugInstall"
