@@ -25,7 +25,6 @@ cp -Rf config/nvim/*        $hdir/.config/nvim/
 mkdir $hdir/downloads
 echo "Doing similar for root"
 mkdir -p /root/.config/{ranger,nvim}
-cp -f rbashrc               /root/.bashrc
 cp -Rf config/ranger/*      /root/.config/ranger/
 cp -Rf config/rnvim/*       /root/.config/nvim/
 echo "Changing the owner (recursively) of the home directory"
