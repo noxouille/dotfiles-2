@@ -8,7 +8,7 @@ pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion libx1
 pip install --upgrade jedi neovim flake8
 # placing everything properly
 cp -R apps/ $hdir/apps
-cp -R config/qutebrowser $hdir/.config
+cp config/qutebrowser/config.py $hdir/.config/qutebrowser/config.py
 cp -R config/ranger $hdir/.config
 cp -R config/nvim $hdir/.config
 cp bashrc $hdir/.bashrc

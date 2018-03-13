@@ -1,5 +1,7 @@
 ## My dotfiles and configs
 
+TODO: qb config
+
 Steps:
 
 1. Install git and clone repo
