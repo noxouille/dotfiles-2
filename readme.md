@@ -1,4 +1,4 @@
-# My dotfiles and script to autoinstall comfy dwm environment
+## dotfiles and script to autoinstall comfy dwm environment
 
 ### Todo
 * Neovim clipboard
