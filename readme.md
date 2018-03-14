@@ -3,7 +3,8 @@
 ### Todo
 * neovim clipboard
 * PS1 prompt behaves strangely after going up in history
-* sudo ranger uses editor vim
+* ranger as sudo uses editor vim
+* ranger image preview (problem: no w3mimgpreview)
 
 Steps (intended to use just after arch install):
 1. Install git and clone repo
