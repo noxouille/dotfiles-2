@@ -2,7 +2,6 @@
 
 ### Todo
 * neovim clipboard (xclip)
-* PS1 prompt behaves strangely after going up in history (???)
 * ranger as sudo uses editor vim
 * ranger image preview (problem: no w3mimgpreview)
 * find useful dwm patches (swallow)
