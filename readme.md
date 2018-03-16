@@ -1,11 +1,13 @@
 ## dotfiles and script to autoinstall comfy dwm environment
 
 ### Todo
-* neovim clipboard
-* PS1 prompt behaves strangely after going up in history
+* neovim clipboard (xclip)
+* PS1 prompt behaves strangely after going up in history (???)
 * ranger as sudo uses editor vim
 * ranger image preview (problem: no w3mimgpreview)
 * find useful dwm patches (swallow)
+* pipe all output to log file
+* root bashrc (?)
 
 Steps (intended to use just after arch install):
 1. Install git and clone repo
