@@ -3,7 +3,7 @@
 ### Todo
 * neovim clipboard (xclip)
 * ranger as sudo uses editor vim (maybe create a symlink for `nvim` called `vim` in `/bin`)
-* ranger image preview (problem: no w3mimgpreview)
+* ranger image preview (problem: w3m or VM)
 * find useful dwm patches (swallow)
 * pipe all output to log file (simple?)
 * uncomment color in /etc/pacman.conf
