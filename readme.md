@@ -1,10 +1,8 @@
 ## dotfiles and script to autoinstall comfy dwm environment
 
 ### Todo
-1. Neovim clipboard (xclip)
 1. Ranger as sudo uses editor vim (maybe create a symlink for `nvim` called `vim` in `/bin`)
 1. Find useful dwm patches (swallow)
-1. Pipe all output to log file (simple?)
 1. Configure git not to ask pwd everytime
 
 Steps (intended to use just after arch install):

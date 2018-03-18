@@ -14,7 +14,7 @@ set statusline+=%p%%\
 set statusline+=[%{strftime('%H:%M')}]
 colorscheme OceanicNext
 if (has('clipboard'))
-    set clipboard=unnamedplus
+    set clipboard+=unnamedplus
 endif
 if (exists('+colorcolumn'))
     set colorcolumn=80
