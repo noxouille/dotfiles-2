@@ -7,8 +7,8 @@ echo "Updating packages"
 pacman -Syu --noconfirm &> /dev/null
 echo "Installing packages (this may take a while)"
 echo "System stuff: xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family python-pip clang"
-echo "Apps: ranger htop scrot w3m atool unzip neovim mupdf mplayer qutebrowser transmission-cli"
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool unzip python-pip clang neovim mupdf mplayer qutebrowser transmission-cli &> /dev/null
+echo "Apps: ranger htop scrot w3m atool highlight unzip neovim mupdf mplayer qutebrowser transmission-cli"
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip clang neovim mupdf mplayer qutebrowser transmission-cli &> /dev/null
 
 echo "Installing pip packages for neovim plugins"
 pip install --upgrade -qqq jedi neovim flake8
