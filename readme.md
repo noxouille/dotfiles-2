@@ -11,7 +11,7 @@ Steps (intended to use just after arch install):
 
 Configure (just for me) (saying like someone else uses this crap):
 1. uncomment color in etc/pacman.conf
-1. locales
+1. layouts
 1. hardware (touchpad, sound, wireless, etc)
 1. dwm hotkeys (brightness, volume, scrot)
 1. Autologin, autostartx
