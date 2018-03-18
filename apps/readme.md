@@ -6,7 +6,7 @@ gcc make pkg-config
 libx11 libxinerama libxft
 ```
 
-Also, in my `config.h`s i use ubuntu fonts which pkg is called:
+Also, in my `config.h` i use ubuntu fonts which pkg is called:
 ```
 ttf-ubuntu-font-family
 ```
