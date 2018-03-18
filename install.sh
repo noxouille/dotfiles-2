@@ -38,6 +38,9 @@ cp -Rf config/ranger/* /root/.config/ranger/
 cp -Rf config/rnvim/*  /root/.config/nvim/
 cp -f  rootrc          /root/.bashrc
 
+echo 'Creating symlink for nvim called vim'
+ln -sf /bin/nvim /bin/vim
+
 echo "Changing the owner (recursively) of the home directory"
 chown -R $1 $hdir
 
