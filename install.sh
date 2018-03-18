@@ -34,9 +34,9 @@ mkdir $hdir/downloads
 
 echo "Doing similar for root"
 mkdir -p /root/.config/{ranger,nvim}
-cp -Rf config/ranger/*      /root/.config/ranger/
-cp -Rf config/rnvim/*       /root/.config/nvim/
-cp -f  rootrc               /root/.bashrc
+cp -Rf config/ranger/* /root/.config/ranger/
+cp -Rf config/rnvim/*  /root/.config/nvim/
+cp -f  rootrc          /root/.bashrc
 
 echo "Changing the owner (recursively) of the home directory"
 chown -R $1 $hdir
