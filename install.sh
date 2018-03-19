@@ -44,4 +44,5 @@ ln -sf /bin/nvim /bin/vim
 echo "Changing the owner (recursively) of the home directory"
 chown -R $1 $hdir
 
-echo "Everything is done, now run in nvim :PlugInstall"
+echo "Everything is done, check the ~/scriptlog.txt in case of errors"
+echo "Now run in nvim :PlugInstall"
