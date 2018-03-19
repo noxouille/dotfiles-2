@@ -30,7 +30,7 @@ mkdir -p $hdir/.config/{qutebrowser,ranger,nvim}
 cp -Rf config/qutebrowser/* $hdir/.config/qutebrowser/
 cp -Rf config/ranger/*      $hdir/.config/ranger/
 cp -Rf config/nvim/*        $hdir/.config/nvim/
-mkdir $hdir/downloads
+mkdir $hdir/{downloads,screens}
 
 echo "Doing similar for root"
 mkdir -p /root/.config/{ranger,nvim}
