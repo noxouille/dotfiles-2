@@ -21,8 +21,8 @@ cd $hdir/apps/st-0.7/    && make clean install >> $hdir/scriptlog.txt
 
 echo "Placing .bashrc and .xinitrc in ~/"
 cd $cdir
-cp -f bashrc  $hdir/.bashrc
-cp -f xinitrc $hdir/.xinitrc
+cp -f misc/bashrc  $hdir/.bashrc
+cp -f misc/xinitrc $hdir/.xinitrc
 
 echo "Placing configs for user in a proper location"
 curl -fLo $hdir/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >> $hdir/scriptlog.txt
@@ -36,7 +36,14 @@ echo "Doing similar for root"
 mkdir -p /root/.config/{ranger,nvim}
 cp -Rf config/ranger/* /root/.config/ranger/
 cp -Rf config/rnvim/*  /root/.config/nvim/
-cp -f  rootrc          /root/.bashrc
+cp -f  misc/rootrc          /root/.bashrc
+
+echo "Making system to autologin $1 and auto startx"
+mkdir -p /etc/systemd/system/getty@tty1.service.d
+echo "[Service]" >> /etc/systemd/system/getty@tty1.service.d/override.conf
+echo "    ExecStart=" >> /etc/systemd/system/getty@tty1.service.d/override.conf
+echo "    ExecStart=-/sbin/agetty --autologin $1 --noclear %I \$TERM" >> /etc/systemd/system/getty@tty1.service.d/override.conf
+cp -f misc/bashprofile $hdir/.bash_profile
 
 echo 'Creating symlink for nvim called vim'
 ln -sf /bin/nvim /bin/vim

@@ -2,16 +2,20 @@
 
 ### Todo
 1. Find useful dwm patches (swallow)
-1. Configure git not to ask pwd everytime
+1. Bash prompt behaves strangely going up in history
 
 Steps (intended to use just after arch install):
 1. Install git and clone repo
 1. Run the install.sh as root (from dotfiles dir) and pass it your username
 1. Start X (optional), run in nvim :PlugInstall
 
-Configure (just for me) (saying like someone else uses this crap):
+Configure:
 1. uncomment color in etc/pacman.conf
 1. layouts
 1. hardware (touchpad, sound, wireless, etc)
-1. dwm hotkeys (brightness, volume, scrot)
-1. Autologin, autostartx
+1. dwm hotkeys (brightness, volume)
+1. for git not to ask pwd everytime:
+```
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+```
