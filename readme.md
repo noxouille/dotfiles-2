@@ -1,7 +1,6 @@
 ## dotfiles and script to autoinstall comfy dwm environment
 
 ### Todo
-1. Find useful dwm patches (swallow)
 1. Bash prompt behaves strangely going up in history
 
 Steps (intended to use just after arch install):

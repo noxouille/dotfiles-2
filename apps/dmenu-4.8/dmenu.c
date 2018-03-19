@@ -288,6 +288,22 @@ nextrune(int inc)
 }
 
 static void
+movewordedge(int dir)
+{
+	if (dir < 0) { /* move cursor to the start of the word*/
+		while (cursor > 0 && strchr(worddelimiters, text[nextrune(-1)]))
+			cursor = nextrune(-1);
+		while (cursor > 0 && !strchr(worddelimiters, text[nextrune(-1)]))
+			cursor = nextrune(-1);
+	} else { /* move cursor to the end of the word */
+		while (text[cursor] && strchr(worddelimiters, text[cursor]))
+			cursor = nextrune(+1);
+		while (text[cursor] && !strchr(worddelimiters, text[cursor]))
+			cursor = nextrune(+1);
+	}
+}
+
+static void
 keypress(XKeyEvent *ev)
 {
 	char buf[32];
@@ -334,6 +350,14 @@ keypress(XKeyEvent *ev)
 			XConvertSelection(dpy, (ev->state & ShiftMask) ? clip : XA_PRIMARY,
 			                  utf8, utf8, win, CurrentTime);
 			return;
+		case XK_Left:
+			movewordedge(-1);
+			ksym = NoSymbol;
+			break;
+		case XK_Right:
+			movewordedge(+1);
+			ksym = NoSymbol;
+			break;
 		case XK_Return:
 		case XK_KP_Enter:
 			break;
@@ -345,6 +369,14 @@ keypress(XKeyEvent *ev)
 		}
 	else if (ev->state & Mod1Mask)
 		switch(ksym) {
+		case XK_b:
+			movewordedge(-1);
+			ksym = NoSymbol;
+			break;
+		case XK_f:
+			movewordedge(+1);
+			ksym = NoSymbol;
+			break;
 		case XK_g: ksym = XK_Home;  break;
 		case XK_G: ksym = XK_End;   break;
 		case XK_h: ksym = XK_Up;    break;
@@ -358,6 +390,8 @@ keypress(XKeyEvent *ev)
 	default:
 		if (!iscntrl(*buf))
 			insert(buf, len);
+		break;
+	case NoSymbol:
 		break;
 	case XK_Delete:
 		if (text[cursor] == '\0')
@@ -467,10 +501,12 @@ paste(void)
 	Atom da;
 
 	/* we have been given the current selection, now insert it into input */
-	XGetWindowProperty(dpy, win, utf8, 0, (sizeof text / 4) + 1, False,
-	                   utf8, &da, &di, &dl, &dl, (unsigned char **)&p);
-	insert(p, (q = strchr(p, '\n')) ? q - p : (ssize_t)strlen(p));
-	XFree(p);
+	if (XGetWindowProperty(dpy, win, utf8, 0, (sizeof text / 4) + 1, False,
+	                   utf8, &da, &di, &dl, &dl, (unsigned char **)&p)
+	    == Success && p) {
+		insert(p, (q = strchr(p, '\n')) ? q - p : (ssize_t)strlen(p));
+		XFree(p);
+	}
 	drawmenu();
 }
 
@@ -539,22 +575,21 @@ run(void)
 static void
 setup(void)
 {
-	int x, y, i = 0;
+	int x, y, i, j;
 	unsigned int du;
 	XSetWindowAttributes swa;
 	XIM xim;
 	Window w, dw, *dws;
 	XWindowAttributes wa;
+	XClassHint ch = {"dmenu", "dmenu"};
 #ifdef XINERAMA
 	XineramaScreenInfo *info;
 	Window pw;
-	int a, j, di, n, area = 0;
+	int a, di, n, area = 0;
 #endif
-
 	/* init appearance */
-	scheme[SchemeNorm] = drw_scm_create(drw, colors[SchemeNorm], 2);
-	scheme[SchemeSel] = drw_scm_create(drw, colors[SchemeSel], 2);
-	scheme[SchemeOut] = drw_scm_create(drw, colors[SchemeOut], 2);
+	for (j = 0; j < SchemeLast; j++)
+		scheme[j] = drw_scm_create(drw, colors[j], 2);
 
 	clip = XInternAtom(dpy, "CLIPBOARD",   False);
 	utf8 = XInternAtom(dpy, "UTF8_STRING", False);
@@ -564,6 +599,7 @@ setup(void)
 	lines = MAX(lines, 0);
 	mh = (lines + 1) * bh;
 #ifdef XINERAMA
+	i = 0;
 	if (parentwin == root && (info = XineramaQueryScreens(dpy, &n))) {
 		XGetInputFocus(dpy, &w, &di);
 		if (mon >= 0 && mon < n)
@@ -613,6 +649,7 @@ setup(void)
 	win = XCreateWindow(dpy, parentwin, x, y, mw, mh, 0,
 	                    CopyFromParent, CopyFromParent, CopyFromParent,
 	                    CWOverrideRedirect | CWBackPixel | CWEventMask, &swa);
+	XSetClassHint(dpy, win, &ch);
 
 	/* open input methods */
 	xim = XOpenIM(dpy, NULL, NULL, NULL);

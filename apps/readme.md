@@ -18,3 +18,5 @@ uselessgap pertag
 
 The colors of dwm are default, st's colors are default except for background
 color, which is set to `#222222` to match dwm.
+
+Maybe need to use swallow patch for dwm

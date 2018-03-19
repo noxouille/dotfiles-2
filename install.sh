@@ -16,8 +16,8 @@ pip install --upgrade jedi neovim flake8 >> $hdir/scriptlog.txt
 echo "Moving and installing suckless apps"
 cp -Rf $cdir/apps/       $hdir/apps
 cd $hdir/apps/dwm-6.1/   && make clean install >> $hdir/scriptlog.txt
-cd $hdir/apps/dmenu-4.7/ && make clean install >> $hdir/scriptlog.txt
-cd $hdir/apps/st-0.7/    && make clean install >> $hdir/scriptlog.txt
+cd $hdir/apps/dmenu-4.8/ && make clean install >> $hdir/scriptlog.txt
+cd $hdir/apps/st-0.8/    && make clean install >> $hdir/scriptlog.txt
 
 echo "Placing .bashrc and .xinitrc in ~/"
 cd $cdir
