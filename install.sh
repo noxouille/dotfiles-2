@@ -36,7 +36,7 @@ echo "Doing similar for root"
 mkdir -p /root/.config/{ranger,nvim}
 cp -Rf config/ranger/* /root/.config/ranger/
 cp -Rf config/rnvim/*  /root/.config/nvim/
-cp -f  misc/rootrc          /root/.bashrc
+cp -f  misc/rootrc     /root/.bashrc
 
 echo "Making system to autologin $1 and auto startx"
 mkdir -p /etc/systemd/system/getty@tty1.service.d
