@@ -11,7 +11,7 @@ echo "Apps: ranger htop scrot w3m atool highlight unzip neovim xclip mupdf mplay
 pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip clang neovim xclip mupdf mplayer qutebrowser transmission-cli >> $hdir/scriptlog.txt
 
 echo "Installing pip packages for neovim plugins"
-pip install --upgrade -qqq jedi neovim flake8
+pip install --upgrade jedi neovim flake8 >> $hdir/scriptlog.txt
 
 echo "Moving and installing suckless apps"
 cp -Rf $cdir/apps/       $hdir/apps
@@ -51,5 +51,5 @@ ln -sf /bin/nvim /bin/vim
 echo "Changing the owner (recursively) of the home directory"
 chown -R $1 $hdir
 
-echo "Everything is done, check the ~/scriptlog.txt in case of errors"
+echo "Everything is done, check the ~/scriptlog.txt for errors"
 echo "Now run in nvim :PlugInstall"
