@@ -4,24 +4,24 @@ cdir=$(pwd)
 hdir=/home/$1
 
 echo "Updating packages"
-pacman -Syu --noconfirm >> $hdir/scriptlog.txt
+pacman -Syu --noconfirm
 echo "Installing packages (this may take a while)"
 echo "System stuff: xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family python-pip clang"
 echo "Apps: ranger htop scrot w3m atool highlight unzip neovim xclip mupdf mplayer qutebrowser transmission-cli"
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip clang neovim xclip mupdf mplayer qutebrowser transmission-cli >> $hdir/scriptlog.txt
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip clang neovim xclip mupdf mplayer qutebrowser transmission-cli
 
 echo "Installing pip packages for neovim plugins"
-pip install --upgrade jedi neovim flake8 >> $hdir/scriptlog.txt
+pip install --upgrade jedi neovim flake8
 
 echo "Moving and installing suckless apps"
 cp -Rf $cdir/apps/       $hdir/apps
-cd $hdir/apps/dwm-6.1/   && make clean install >> $hdir/scriptlog.txt
-cd $hdir/apps/dmenu-4.8/ && make clean install >> $hdir/scriptlog.txt
-cd $hdir/apps/st-0.8/    && make clean install >> $hdir/scriptlog.txt
+cd $hdir/apps/dwm-6.1/   && make clean install
+cd $hdir/apps/dmenu-4.8/ && make clean install
+cd $hdir/apps/st-0.8/    && make clean install
 
 echo "Placing .bashrc and .xinitrc in ~/"
 cd $cdir
-cp -f misc/bashrc  $hdir/.bashrc
+cp -f misc/bashrc  $hdir/.bashrc 
 cp -f misc/xinitrc $hdir/.xinitrc
 
 echo "Placing configs for user in a proper location"
