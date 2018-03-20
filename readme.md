@@ -1,9 +1,12 @@
-## dotfiles and script to autoinstall comfy dwm environment
+## My dotfiles and script to autoinstall comfy dwm environment
 
 ![Screenshot of my setup](screenshot.png)
 
 ### Todo
-1. Bash prompt behaves strangely going up in history
+1. Change dwm (no uselessgap)
+
+### Problems
+* Bash prompt behaves strangely going up in history
 
 Steps (intended to use just after arch install):
 1. Install git and clone repo
