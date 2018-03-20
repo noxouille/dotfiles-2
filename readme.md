@@ -1,6 +1,6 @@
 ## dotfiles and script to autoinstall comfy dwm environment
 
-![Screenshot of my setup](screenshot.jpg)
+![Screenshot of my setup](screenshot.png)
 
 ### Todo
 1. Bash prompt behaves strangely going up in history
