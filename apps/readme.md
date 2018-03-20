@@ -6,14 +6,14 @@ gcc make pkg-config
 libx11 libxinerama libxft
 ```
 
-Also, in my `config.h` i use ubuntu fonts which pkg is called:
+I use ubuntu fonts, package for them is called:
 ```
 ttf-ubuntu-font-family
 ```
 
-DWM has these patches applied:
+DWM has these patches applied (considering applying patch swallow):
 ```
 uselessgap pertag
 ```
 
-Maybe need to use swallow patch for dwm
+All the colors are default except for dwm's selected border color.
