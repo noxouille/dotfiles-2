@@ -21,7 +21,7 @@ cd $hdir/apps/st-0.8/    && make clean install
 
 echo "Placing .bashrc and .xinitrc in ~/"
 cd $cdir
-cp -f misc/bashrc  $hdir/.bashrc 
+cp -f misc/bashrc  $hdir/.bashrc
 cp -f misc/xinitrc $hdir/.xinitrc
 
 echo "Placing configs for user in a proper location"
