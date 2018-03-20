@@ -2,7 +2,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int gappx = 2;
+static const unsigned int gappx = 0;
 static const char *fonts[] = {
 	"Ubuntu Mono:size=11"
 	/* "Ubuntu Mono:size=10" */
@@ -12,7 +12,7 @@ static const char dmenufont[]       = "Ubuntu Mono:size=11";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
+static const char selbordercolor[]  = "#00aa00";
 static const char selbgcolor[]      = "#005577";
 static const char selfgcolor[]      = "#eeeeee";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
