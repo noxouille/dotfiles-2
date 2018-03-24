@@ -1,6 +1,6 @@
 ## My dotfiles and script to autoinstall comfy dwm environment
 
-![Screenshot of my setup](screenshot.png)
+![Screenshot of my setup](screenshot.jpg)
 
 ### Todo
 1. Change dwm (no uselessgap)
