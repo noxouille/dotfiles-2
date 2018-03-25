@@ -5,7 +5,6 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-/* static char *font = "DejaVu Sans Mono:size=10:antialias=true:autohint=true"; */
 static char *font = "Ubuntu Mono:size=11:antialias=true:autohint=true";
 static int borderpx = 2;
 
