@@ -5,12 +5,12 @@
 ### Problems
 * Bash prompt behaves strangely going up in history
 
-Steps (intended to use just after arch install):
+### Steps (intended to use just after arch install):
 1. Install git and clone repo
 1. Run the install.sh as root (from dotfiles dir) and pass it your username
 1. Start X (optional), run in nvim :PlugInstall
 
-Configure:
+### Configure:
 1. uncomment color in etc/pacman.conf
 1. layouts
 1. hardware (touchpad, sound, wireless, etc)
