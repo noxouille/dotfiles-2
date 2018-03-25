@@ -2,9 +2,6 @@
 
 ![Screenshot of my setup](screenshot.jpg)
 
-### Todo
-1. Change dwm (no uselessgap)
-
 ### Problems
 * Bash prompt behaves strangely going up in history
 
