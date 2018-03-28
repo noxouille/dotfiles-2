@@ -57,15 +57,21 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "st", NULL };
-/* static const char *upvol[] = { "amixer", "set", "Master", "5%+", NULL }; */
-/* static const char *downvol[] = { "amixer", "set", "Master", "5%-", NULL }; */
+/* static const char *upvol[] =   { "amixer", "set", "Master", "5%+", NULL };
+   static const char *upvol[] =   { "pamixer", "-i", "5", NULL };
+   static const char *downvol[] = { "amixer", "set", "Master", "5%-", NULL };
+   static const char *downvol[] = { "pamixer", "-d", "5", NULL };
+   static const char *upbr[] =    { "xbacklight", "-inc", "5", NULL };
+   static const char *downbr[] =  { "xbacklight", "-dec", "5", NULL }; */
 static const char *fscrot[] = { "scrot", "%d-%m-%Y-%H:%M-f.jpg", "-e", "mv $f ~/screens/", NULL };
 static const char *mscrot[] = { "scrot", "%d-%m-%Y-%H:%M-f.jpg", "-e", "mv $f ~/screens/", "--focused", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-/*	{ 0,                            XF86XK_AudioRaiseVolume,      spawn,          {.v = upvol } }, */
-/*	{ 0,                            XF86XK_AudioLowerVolume,      spawn,          {.v = downvol } }, */
+/*	{ 0,                            XF86XK_AudioRaiseVolume,      spawn,          {.v = upvol } },
+	{ 0,                            XF86XK_AudioLowerVolume,      spawn,          {.v = downvol } },
+	{ 0,                            XF86XK_MonBrightnessUp,       spawn,          {.v = upbr } },
+	{ 0,                            XF86XK_MonBrightnessDown,     spawn,          {.v = downbr } }, */
 	{ 0,                            XK_Print,                     spawn,          {.v = fscrot } },
 	{ MODKEY,                       XK_Print,                     spawn,          {.v = mscrot } },
 	{ MODKEY,                       XK_p,                         spawn,          {.v = dmenucmd } },

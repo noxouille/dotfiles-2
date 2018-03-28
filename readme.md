@@ -14,7 +14,14 @@
 1. uncomment color in etc/pacman.conf
 1. layouts
 1. hardware (touchpad, sound, wireless, etc)
-1. dwm hotkeys (brightness, volume)
+```
+For my lenovo g510:
+wifi:       needs broadcom-wl from aur (aurman for help)
+sound:      needs pulseaudio
+brightness: needs xorg-xbacklight and xf86-video-intel
+touchpad:   move config file to /etc/X11/xorg.conf.d/30-touchpad.conf
+```
+1. dwm hotkeys
 1. for git not to ask pwd everytime:
 ```
 git config --global credential.helper cache
