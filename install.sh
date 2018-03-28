@@ -25,7 +25,7 @@ cp -f misc/bashrc  $hdir/.bashrc
 cp -f misc/xinitrc $hdir/.xinitrc
 
 echo "Placing configs for user in a proper location"
-curl -fLo $hdir/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >> $hdir/scriptlog.txt
+curl -fLo $hdir/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir -p $hdir/.config/{qutebrowser,ranger,nvim}
 cp -Rf config/qutebrowser/* $hdir/.config/qutebrowser/
 cp -Rf config/ranger/*      $hdir/.config/ranger/
@@ -51,5 +51,5 @@ ln -sf /bin/nvim /bin/vim
 echo "Changing the owner (recursively) of the home directory"
 chown -R $1 $hdir
 
-echo "Everything is done, check the ~/scriptlog.txt for errors"
+echo "Everything is done"
 echo "Now run in nvim :PlugInstall"
