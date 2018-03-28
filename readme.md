@@ -15,14 +15,11 @@
 1. layouts
     Move keyboard config file to /etc/X11/xorg.conf.d/00-keyboard.conf
 1. hardware (touchpad, sound, wireless, etc)
-for | lenovo g510                                                     
+For        | lenovo g510                                                     
 -----------|-------------------------------------------------------------
 wifi       | needs broadcom-wl from aur (aurman for help)              
------------|-------------------------------------------------------------
 sound      | needs pulseaudio pamixer                                  
------------|-------------------------------------------------------------
 brightness | needs xorg-xbacklight and xf86-video-intel                
------------|-------------------------------------------------------------
 touchpad   | move config file to /etc/X11/xorg.conf.d/30-touchpad.conf 
 1. dwm hotkeys
     Uncomment needed lines in dwm's config.h
