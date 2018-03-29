@@ -46,7 +46,7 @@ echo "    ExecStart=-/sbin/agetty --autologin $1 --noclear %I \$TERM" >> /etc/sy
 cp -f misc/bashprofile $hdir/.bash_profile
 
 echo 'Creating symlink for nvim called vim'
-ln -sf /bin/nvim /bin/vim
+ln -sf /bin/nvim /usr/bin/vim
 
 echo "Changing the owner (recursively) of the home directory"
 chown -R $1 $hdir
