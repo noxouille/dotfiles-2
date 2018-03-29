@@ -11,25 +11,32 @@
 3. Start X (optional), run in nvim :PlugInstall
 
 ### Configure:
-1. uncomment color in etc/pacman.conf
-2. layouts
+* uncomment color in etc/pacman.conf
+* layouts
 ```
-Move keyboard config file to /etc/X11/xorg.conf.d/00-keyboard.conf
+# mv misc/personal/keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
 ```
-3. hardware (touchpad, sound, wireless, etc)
+* hardware (touchpad, sound, wireless, etc)
 ```
 For my lenovo g510                                                     
-wifi       : needs broadcom-wl from aur (aurman for help)              
-sound      : needs pulseaudio pamixer                                  
-brightness : needs xorg-xbacklight and xf86-video-intel                
-touchpad   : move config file to /etc/X11/xorg.conf.d/30-touchpad.conf 
+wifi       : $ aurman -S broadcom-wl
+sound      : #  pacman -S pulseaudio pamixer && sudo reboot
+brightness : #  pacman -S xorg-xbacklight xf86-video-intel && sudo reboot
+touchpad   : #  mv misc/personal/touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf 
 ```
-4. dwm hotkeys
+* dwm hotkeys
 ```
 Uncomment needed lines in dwm's config.h
 ```
-5. for git not to ask pwd everytime:
+* for git not to ask pwd everytime:
 ```
-git config --global credential.helper cache
-git config --global credential.helper 'cache --timeout=3600'
+$ git config --global credential.helper cache
+$ git config --global credential.helper 'cache --timeout=3600'
+```
+* power saving
+```
+# pacman -S powertop
+# powertop --calibrate
+# mv misc/personal/powertop /etc/systemd/system/powertop.service
+# systemctl enable powertop.service
 ```
