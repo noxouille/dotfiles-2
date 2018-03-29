@@ -20,8 +20,8 @@
 ```
 For my lenovo g510                                                     
 wifi       : $ aurman -S broadcom-wl
-sound      : # pacman -S pulseaudio pamixer && sudo reboot
-brightness : # pacman -S xorg-xbacklight xf86-video-intel && sudo reboot
+sound      : # pacman -S pulseaudio pamixer && reboot
+brightness : # pacman -S xorg-xbacklight xf86-video-intel && reboot
 touchpad   : # mv misc/personal/touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf 
 For my acer extensa 5630:
 sound      : # pacman -S alsa-utils (unmute channel in alsamixer)
