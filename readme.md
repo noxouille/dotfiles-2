@@ -40,7 +40,6 @@ $ git config --global credential.helper 'cache --timeout=3600'
 * power saving
 ```
 # pacman -S powertop
-# powertop --calibrate
 # mv misc/personal/powertop /etc/systemd/system/powertop.service
 # systemctl enable powertop.service
 ```
