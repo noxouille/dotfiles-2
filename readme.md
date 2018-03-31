@@ -14,7 +14,7 @@
 * uncomment color in etc/pacman.conf
 * layouts
 ```
-# mv misc/personal/keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
+# cp misc/personal/keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
 ```
 * hardware (touchpad, sound, wireless, etc)
 ```
@@ -40,6 +40,6 @@ $ git config --global credential.helper 'cache --timeout=3600'
 * power saving
 ```
 # pacman -S powertop
-# mv misc/personal/powertop /etc/systemd/system/powertop.service
+# cp misc/personal/powertop /etc/systemd/system/powertop.service
 # systemctl enable powertop.service
 ```
