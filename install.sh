@@ -6,9 +6,9 @@ hdir=/home/$1
 echo "Updating packages"
 pacman -Syu --noconfirm
 echo "Installing packages (this may take a while)"
-echo "System stuff: xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family python-pip clang"
+echo "System stuff: xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-dejavu python-pip clang"
 echo "Apps: ranger htop scrot w3m atool highlight unzip neovim xclip mupdf mplayer qutebrowser transmission-qt"
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip clang neovim xclip mupdf mplayer qutebrowser transmission-qt
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-dejavu ranger htop scrot w3m atool highlight unzip python-pip clang neovim xclip mupdf mplayer qutebrowser transmission-qt
 
 echo "Installing pip packages for neovim plugins"
 pip install --upgrade jedi neovim flake8
