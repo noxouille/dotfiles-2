@@ -6,7 +6,7 @@ static const unsigned int gappx = 0;
 static const char *fonts[] = {
 	"Ubuntu Mono:size=11"
 };
-static const char dmenufont[]       = "Ubuntu Mono:size=11";
+static const char dmenufont[]       = "Ubuntu Mono:size=13";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";

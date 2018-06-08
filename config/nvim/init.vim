@@ -26,6 +26,8 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'w0rp/ale'
 Plug 'roxma/ncm-clang'
 Plug 'roxma/nvim-completion-manager'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 call plug#end()
 let g:indent_guides_enable_on_vim_startup = 1
 let g:ale_sign_column_always = 1
