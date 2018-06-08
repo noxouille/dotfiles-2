@@ -2,7 +2,6 @@
 
 ## TODO:
 * switch to a pixelated font
-* switch to base16 material colorscheme
 
 ### Problems
 * Bash prompt behaves strangely going up in history
