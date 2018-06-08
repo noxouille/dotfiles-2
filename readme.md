@@ -1,7 +1,5 @@
 ## My dotfiles and script to autoinstall comfy dwm environment
 
-![Screenshot of my setup](screenshot.jpg)
-
 ## TODO:
 * switch to a pixelated font
 * switch to base16 material colorscheme

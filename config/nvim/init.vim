@@ -12,7 +12,7 @@ set statusline+=line:%l/%L\
 set statusline+=col:%c\ 
 set statusline+=%p%%\ 
 set statusline+=[%{strftime('%H:%M')}]
-colorscheme OceanicNext
+colorscheme base16-material
 if (has('clipboard'))
     set clipboard+=unnamedplus
 endif
