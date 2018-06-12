@@ -8,7 +8,7 @@ pacman -Syu --noconfirm
 echo "Installing packages (this may take a while)"
 echo "System stuff: xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-dejavu python-pip clang"
 echo "Apps: ranger htop scrot w3m atool highlight unzip neovim xclip mupdf mplayer qutebrowser transmission-qt"
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-dejavu ranger htop scrot w3m atool highlight unzip python-pip clang neovim xclip mupdf mplayer qutebrowser transmission-qt
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-dejavu ranger htop scrot w3m atool highlight unzip python-pip clang neovim xclip mupdf mplayer qutebrowser transmission-qt urxvt
 
 echo "Installing pip packages for neovim plugins"
 pip install --upgrade jedi neovim flake8
@@ -17,12 +17,12 @@ echo "Moving and installing suckless apps"
 cp -Rf $cdir/apps/       $hdir/apps
 cd $hdir/apps/dwm-6.1/   && make clean install
 cd $hdir/apps/dmenu-4.8/ && make clean install
-cd $hdir/apps/st-0.8/    && make clean install
 
 echo "Placing .bashrc and .xinitrc in ~/"
 cd $cdir
-cp -f misc/bashrc  $hdir/.bashrc
-cp -f misc/xinitrc $hdir/.xinitrc
+cp -f misc/bashrc     $hdir/.bashrc
+cp -f misc/xinitrc    $hdir/.xinitrc
+cp -f misc/Xresources $hdir/.Xresources
 
 echo "Placing configs for user in a proper location"
 curl -fLo $hdir/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

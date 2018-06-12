@@ -1,7 +1,9 @@
 #!/bin/bash
 
 export EDITOR=nvim
-xsetroot -solid \#004040
+export _JAVA_AWT_WM_NONREPARENTING=1
+xsetroot -solid \#546e7a
+xrdb ~/.Xresources
 
 # For BAT : $(cat /sys/class/power_supply/BAT0/capacity)
 while true;
