@@ -1,7 +1,7 @@
 ## My dotfiles and script to autoinstall comfy dwm environment
 
 ## TODO:
-* switch to a pixelated font
+* Update nvim configs also dwm
 
 ### Problems
 * Bash prompt behaves strangely going up in history
