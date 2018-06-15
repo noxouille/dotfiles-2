@@ -15,5 +15,3 @@ DWM has these patches applied (considering applying patch swallow):
 ```
 uselessgap pertag
 ```
-
-All the colors are default except for dwm's selected border color.

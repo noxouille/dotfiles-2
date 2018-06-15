@@ -1,8 +1,5 @@
 ## My dotfiles and script to autoinstall comfy dwm environment
 
-## TODO:
-* Update nvim configs also dwm
-
 ### Problems
 * Bash prompt behaves strangely going up in history
 

@@ -3,7 +3,7 @@ syntax enable
 set number
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set autoindent
-set termguicolors
+"set termguicolors
 set laststatus=2
 set statusline=[%n]\ 
 set statusline+=%<%F\ 
@@ -12,7 +12,9 @@ set statusline+=line:%l/%L\
 set statusline+=col:%c\ 
 set statusline+=%p%%\ 
 set statusline+=[%{strftime('%H:%M')}]
+set background=dark
 colorscheme base16-material
+
 if (has('clipboard'))
     set clipboard+=unnamedplus
 endif
