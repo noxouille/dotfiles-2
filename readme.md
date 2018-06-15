@@ -1,5 +1,7 @@
 ## My dotfiles and script to autoinstall comfy dwm environment
 
+![Screenshot](./screenshot.jpg)
+
 ### Problems
 * Bash prompt behaves strangely going up in history
 
