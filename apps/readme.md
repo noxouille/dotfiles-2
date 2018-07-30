@@ -6,9 +6,9 @@ gcc make pkg-config
 libx11 libxinerama libxft
 ```
 
-I use dejavu font family, package for them is called:
+I use roboto mono font, package for them is called:
 ```
-ttf-dejavu
+ttf-roboto
 ```
 
 DWM has these patches applied (considering applying patch swallow):

@@ -739,7 +739,7 @@ c.downloads.location.directory = '~/downloads/'
 ## `{line0}`: Same as `{line}`, but starting from index 0. * `{column0}`:
 ## Same as `{column}`, but starting from index 0.
 ## Type: ShellCommand
-c.editor.command = ['st', '-e', 'nvim', '{file}']
+c.editor.command = ['urxvt', '-e', 'nvim', '{file}']
 
 ## Encoding to use for the editor.
 ## Type: Encoding
@@ -784,7 +784,7 @@ c.editor.command = ['st', '-e', 'nvim', '{file}']
 ## Default monospace fonts. Whenever "monospace" is used in a font
 ## setting, it's replaced with the fonts listed here.
 ## Type: Font
-c.fonts.monospace = '"Ubuntu Mono", "DejaVu Sans Mono"'
+c.fonts.monospace = '"Roboto Mono", "DejaVu Sans Mono"'
 
 ## Font used for prompts.
 ## Type: Font
@@ -809,19 +809,19 @@ c.fonts.prompts = '10pt monospace'
 
 ## Font family for fixed fonts.
 ## Type: FontFamily
-c.fonts.web.family.fixed = 'Ubuntu Mono'
+c.fonts.web.family.fixed = 'DejaVu'
 
 ## Font family for sans-serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.sans_serif = 'Ubuntu'
+c.fonts.web.family.sans_serif = 'DejaVu'
 
 ## Font family for serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.serif = 'Ubuntu'
+c.fonts.web.family.serif = 'DejaVu'
 
 ## Font family for standard fonts.
 ## Type: FontFamily
-c.fonts.web.family.standard = 'Ubuntu'
+c.fonts.web.family.standard = 'DejaVu'
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
@@ -1293,7 +1293,7 @@ c.fonts.web.family.standard = 'Ubuntu'
 ## Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 ## for a blank page.
 ## Type: FuzzyUrl
-# c.url.default_page = 'https://start.duckduckgo.com/'
+c.url.default_page = '~/webdata/output.html'
 
 ## URL segments where `:navigate increment/decrement` will search for a
 ## number.
@@ -1318,7 +1318,7 @@ c.fonts.web.family.standard = 'Ubuntu'
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-# c.url.start_pages = ['https://start.duckduckgo.com']
+c.url.start_pages = ['~/webdata/output.html']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
