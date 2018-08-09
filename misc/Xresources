@@ -1,49 +1,61 @@
-! Base16 Material
-! Scheme: Nate Peterson
+URxvt.font: xft:Roboto Mono:style=Regular:size=10
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
 
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
 
-URxvt.font: xft:DejaVu Sans Mono:size=11
-URxvt.scrollBar: false
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
 
-#define base00 #263238
-#define base01 #2e3c43
-#define base02 #314549
-#define base03 #546e7a
-#define base04 #b2ccd6
-#define base05 #eeffff
-#define base06 #eeffff
-#define base07 #ffffff
-#define base08 #f07178
-#define base09 #f78c6c
-#define base0A #ffcb6b
-#define base0B #c3e88d
-#define base0C #89ddff
-#define base0D #82aaff
-#define base0E #c792ea
-#define base0F #ff5370
+! Pointer
+URxvt.pointerBlank:         true
 
-*foreground:   base05
-#ifdef background_opacity
-*background:   [background_opacity]base00
-#else
-*background:   base00
-#endif
-*cursorColor:  base05
+!!Source http://github.com/altercation/solarized
 
-*color0:       base00
-*color1:       base08
-*color2:       base0B
-*color3:       base0A
-*color4:       base0D
-*color5:       base0E
-*color6:       base0C
-*color7:       base05
+*background: #002b36
+*foreground: #657b83
+!!*fading: 40
+*fadeColor: #002b36
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
 
-*color8:       base03
-*color9:       base09
-*color10:      base01
-*color11:      base02
-*color12:      base04
-*color13:      base06
-*color14:      base0F
-*color15:      base07
+!! black dark/light
+*color0: #073642
+*color8: #002b36
+
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+
+!! green dark/light
+*color2: #859900
+*color10: #586e75
+
+!! yellow dark/light
+*color3: #b58900
+*color11: #657b83
+
+!! blue dark/light
+*color4: #268bd2
+*color12: #839496
+
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+
+!! cyan dark/light
+*color6: #2aa198
+*color14: #93a1a1
+
+!! white dark/light
+*color7: #eee8d5
+*color15: #fdf6e3

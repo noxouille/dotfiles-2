@@ -1,7 +1,5 @@
 ## My dotfiles and script to autoinstall comfy dwm environment
 
-![Screenshot](./screenshot.jpg)
-
 ### Problems
 * Bash prompt behaves strangely going up in history
 
@@ -23,11 +21,8 @@ wifi       : $ aurman -S broadcom-wl
 sound      : # pacman -S pulseaudio pamixer && reboot
 brightness : # pacman -S xorg-xbacklight xf86-video-intel && reboot
 touchpad   : # mv misc/personal/touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf 
-For my acer extensa 5630:
-sound      : # pacman -S alsa-utils (unmute channel in alsamixer)
-brightness : $ gcc misc/personal/br.c -o brcontrol
-             # mv brcontrol /usr/bin/ && chmod +x /usr/bin/brcontrol
 ```
+
 * dwm hotkeys
 ```
 Uncomment needed lines in dwm's config.h
