@@ -1,4 +1,4 @@
-URxvt.font: xft:Roboto Mono:style=Regular:size=10
+URxvt.font: xft:Ubuntu Mono:style=Regular:size=11
 !-------------------------------------------------------------------------------
 ! URxvt settings
 ! Colours lifted from Solarized (http://ethanschoonover.com/solarized)

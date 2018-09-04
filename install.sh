@@ -6,9 +6,9 @@ hdir=/home/$1
 echo "Updating packages"
 pacman -Syu --noconfirm
 echo "Installing packages (this may take a while)"
-echo "System stuff: xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-dejavu ttf-roboto-mono python-pip"
-echo "Apps: ranger htop scrot w3m atool highlight unzip neovim xclip mupdf mplayer qutebrowser transmission-qt nodejs npm urxvt nodejs npm yarn"
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-dejavu ttf-roboto-mono ranger htop scrot w3m atool highlight unzip python-pip neovim xclip mupdf mplayer qutebrowser transmission-qt urxvt nodejs npm yarn
+echo "System stuff: xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family python-pip"
+echo "Apps: ranger htop scrot w3m atool highlight unzip neovim xclip mupdf mplayer qutebrowser transmission-qt nodejs npm urxvt nodejs npm"
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip neovim xclip mupdf mplayer qutebrowser transmission-qt urxvt nodejs npm
 
 echo "Moving and installing suckless apps"
 cp -Rf $cdir/apps/       $hdir/apps
