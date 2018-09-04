@@ -784,7 +784,7 @@ c.editor.command = ['urxvt', '-e', 'nvim', '{file}']
 ## Default monospace fonts. Whenever "monospace" is used in a font
 ## setting, it's replaced with the fonts listed here.
 ## Type: Font
-c.fonts.monospace = '"Roboto Mono", "DejaVu Sans Mono"'
+c.fonts.monospace = '"Ubuntu Mono", "DejaVu Sans Mono"'
 
 ## Font used for prompts.
 ## Type: Font
@@ -809,19 +809,19 @@ c.fonts.prompts = '10pt monospace'
 
 ## Font family for fixed fonts.
 ## Type: FontFamily
-c.fonts.web.family.fixed = 'DejaVu'
+c.fonts.web.family.fixed = 'Ubuntu'
 
 ## Font family for sans-serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.sans_serif = 'DejaVu'
+c.fonts.web.family.sans_serif = 'Ubuntu'
 
 ## Font family for serif fonts.
 ## Type: FontFamily
-c.fonts.web.family.serif = 'DejaVu'
+c.fonts.web.family.serif = 'Ubuntu'
 
 ## Font family for standard fonts.
 ## Type: FontFamily
-c.fonts.web.family.standard = 'DejaVu'
+c.fonts.web.family.standard = 'Ubuntu'
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
