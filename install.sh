@@ -8,7 +8,7 @@ pacman -Syu --noconfirm
 echo "Installing packages (this may take a while)"
 echo "System stuff: xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family python-pip"
 echo "Apps: ranger htop scrot w3m atool highlight unzip neovim xclip mupdf mplayer qutebrowser transmission-qt nodejs npm urxvt nodejs npm"
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip neovim xclip mupdf mplayer qutebrowser transmission-qt urxvt nodejs npm
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip neovim xclip mupdf mplayer qutebrowser transmission-qt rxvt-unicode nodejs npm
 
 echo "Moving and installing suckless apps"
 cp -Rf $cdir/apps/       $hdir/apps
