@@ -3,6 +3,10 @@
 ### Problems
 * Bash prompt behaves strangely going up in history
 
+### TODO:
+* aurman
+* VScode
+
 ### Steps (intended to use just after arch install):
 1. Install git and clone repo
 2. Run the install.sh as root (from dotfiles dir) and pass it your username
