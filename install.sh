@@ -7,8 +7,8 @@ echo "Updating packages"
 pacman -Syu --noconfirm
 echo "Installing packages (this may take a while)"
 echo "System stuff: xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family python-pip"
-echo "Apps: ranger htop scrot w3m atool highlight unzip neovim xclip mupdf mplayer qutebrowser transmission-qt nodejs npm urxvt nodejs npm"
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip neovim xclip mupdf mplayer qutebrowser transmission-qt rxvt-unicode nodejs npm
+echo "Apps: ranger htop scrot w3m atool highlight unzip neovim xclip mupdf mplayer qutebrowser transmission-qt nodejs npm urxvt nodejs npm yarn zip unrar openssh filezilla gimp inkscape chromium firefox libreoffice-fresh"
+pacman -S --noconfirm xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama ttf-ubuntu-font-family ranger htop scrot w3m atool highlight unzip python-pip neovim xclip mupdf mplayer qutebrowser transmission-qt rxvt-unicode nodejs npm yarn zip unrar openssh filezilla gimp inkscape chromium firefox libreoffice-fresh
 
 echo "Moving and installing suckless apps"
 cp -Rf $cdir/apps/       $hdir/apps
@@ -44,6 +44,10 @@ cp -f misc/bashprofile $hdir/.bash_profile
 
 echo 'Creating symlink for nvim called vim'
 ln -sf /bin/nvim /usr/bin/vim
+
+echo 'Installing eslint'
+npm install -g eslint
+cp -Rf misc/eslintrc.json $hdir/.eslintrc.json
 
 echo "Changing the owner (recursively) of the home directory"
 chown -R $1 $hdir

@@ -1,4 +1,5 @@
 #include <X11/XF86keysym.h>
+#include "colorscheme.h"
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
