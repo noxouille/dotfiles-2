@@ -12,4 +12,5 @@ do
 	sleep 1m
 done &
 
+xwinwrap -ov -ni -fs -- mpv -wid WID --keepaspect=no --loop ~/.cache/gifs/pixels10.gif &
 exec dwm
