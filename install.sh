@@ -6,9 +6,9 @@ bindir=$hdir/dotfiles-2/bin
 fontdir=$hdir/dotfiles-2/misc/fonts
 
 pkg_system="xorg-server xorg-xinit xorg-xsetroot bash-completion gcc make pkg-config libx11 libxft libxinerama patch python-pip python-pywal fakeroot"
-pkg_essentials="openssh vsftpd wget git ps_mem ranger htop scrot w3m atool highlight zip unzip neovim xclip mupdf mpv surf rxvt-unicode unrar"
+pkg_essentials="openssh vsftpd wget git ps_mem ranger htop scrot w3m atool highlight zip unzip vim xclip mupdf mpv surf rxvt-unicode unrar feh"
 pkg_gui_apps="filezilla gimp inkscape chromium firefox libreoffice-fresh"
-pkg_fonts="noto-fonts-cjk adobe-source-han-serif-otc-fonts"
+pkg_fonts="noto-fonts-cjk adobe-source-han-serif-otc-fonts" # noto-fonts-cjk is enough
 list_pkgs="$pkg_system $pkg_essentials"
 # TODO: add pkg_fonts and pkg_gui_apps when testing is done
 
@@ -64,17 +64,17 @@ cp -f misc/xinitrc    $hdir/.xinitrc
 cp -f misc/Xresources $hdir/.Xresources
 
 echo "Placing configs for user in a proper location"
-curl -fLo $hdir/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-mkdir -p $hdir/.config/{ranger,nvim} # removed qutebrowser
+#curl -fLo $hdir/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir -p $hdir/.config/{ranger} # removed qutebrowser, nvim
 #cp -Rf config/qutebrowser/* $hdir/.config/qutebrowser/
 cp -Rf config/ranger/*      $hdir/.config/ranger/
-cp -Rf config/nvim/*        $hdir/.config/nvim/
+#cp -Rf config/nvim/*        $hdir/.config/nvim/
 mkdir $hdir/{downloads,screens}
 
 echo "Doing similar for root"
-mkdir -p /root/.config/{ranger,nvim}
+mkdir -p /root/.config/{ranger} # removed nvim
 cp -Rf config/ranger/* /root/.config/ranger/
-cp -Rf config/rnvim/*  /root/.config/nvim/
+#cp -Rf config/rnvim/*  /root/.config/nvim/
 cp -f  misc/rootrc     /root/.bashrc
 
 echo "Making system to autologin $1 and auto startx"
@@ -84,8 +84,8 @@ echo "    ExecStart=" >> /etc/systemd/system/getty@tty1.service.d/override.conf
 echo "    ExecStart=-/sbin/agetty --autologin $1 --noclear %I \$TERM" >> /etc/systemd/system/getty@tty1.service.d/override.conf
 cp -f misc/bashprofile $hdir/.bash_profile
 
-echo 'Creating symlink for nvim called vim'
-ln -sf /bin/nvim /usr/bin/vim
+#echo 'Creating symlink for nvim called vim'
+#ln -sf /bin/nvim /usr/bin/vim
 
 #echo 'Installing eslint'
 #npm install -g eslint
@@ -100,4 +100,4 @@ rm -rf $hdir/apps
 rm -rf $hdir/xwinwrap
 
 echo "Everything is done"
-echo "Now run in nvim :PlugInstall"
+#echo "Now run in nvim :PlugInstall"
